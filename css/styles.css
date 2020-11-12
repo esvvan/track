@@ -1,0 +1,205 @@
+.clearFix {
+    float: none;
+    clear: both;
+}
+
+/** Tabla */
+#trackTable {
+    table-layout: auto;
+    width: 1565px;
+    border-radius: 5px;
+    border-spacing: 2px;
+    box-shadow: -2px 3px 20px rgb(44, 44, 44);
+    padding: 2px;
+}
+
+/** Table Headers */
+#trackTable thead > tr > th {
+    width: max-content;
+    background-color: rgb(85, 153, 165);
+    color: white;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.wide-column {
+    width: 115px;
+}
+
+/** Table Body */
+#trackTable td {
+    color: black;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 1px;
+    border-radius: 3px;
+}
+
+th span {
+    /* -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl; */
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 15px;
+    /* white-space: nowrap; */
+}
+
+.DCRC {
+    background-color: rgb(12, 113, 207);
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: 22px !important;
+    font-weight: bold;
+    color: white !important;
+}
+
+#trackTable tbody > tr > td > .signs {
+    font-size: 22px;
+    line-height: 35px;
+    border-radius: 10px;
+}
+
+#trackTable tbody > tr > td > .signs:hover {
+    box-shadow: 2px 2px 1px rgb(0, 0, 0), 0px 0px 45px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+/** Zoom cells and first child shadow. */
+.signCell:hover {
+    transform: scale(1.4, 1.4);
+    transition: all 300ms;
+}
+
+.signCell:hover > :first-child {
+    box-shadow: 2px 2px 1px rgb(0, 0, 0), 0px 0px 45px rgb(0, 0, 0);
+}
+
+#trackTable tbody > tr:hover {
+    background-color: rgba(0, 0, 0, 0.171) !important;
+    transition: all 300ms;
+}
+
+/** Status classes. */
+.doneOnTime {
+    height: 35px;
+    background-color: rgb(5, 149, 5) !important;
+    color: white !important;
+}
+
+.doneLate {
+    height: 35px;
+    background-color: rgb(158, 236, 14);
+}
+
+.pendingOnTime {
+    height: 35px;
+    background-color: rgb(255, 208, 0);
+    color: black !important;
+}
+
+.pendingLate {
+    height: 35px;
+    background-color: rgb(221, 14, 14) !important;
+    color: white !important;
+}
+
+/* PopUp */
+.window {
+    display: none;
+    position: absolute;
+    margin-top: -65px;
+    margin-left: 60px;
+    width: 130px;
+    height: 140px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #242424 35%, transparent);
+    z-index: 1;
+    animation: openPopUp 155ms linear;
+}
+
+@keyframes openPopUp {
+    from {
+        transform: scale(0, 0);
+    }
+    to {
+        transform: scale(0.9, 0.9);
+    }
+}
+
+@keyframes closePopUp {
+    from {
+        transform: translateY(10%);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateY(60%);
+        opacity: 0;
+    }
+}
+
+/* Window Info*/
+#myCard .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin-left: 10px;
+    float: left;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#myCard .circle:hover {
+    opacity: 1;
+    transform: translateY(-10%);
+    box-shadow: 1px 2px 3px black;
+    transition: all 300ms;
+}
+
+/**close button on PopUp. */
+.closeBtn {
+    width: 25px;
+    height: 25px;
+    margin-left: 93px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    font-size: 20px;
+    color: #e77878 !important;
+    line-height: 22px;
+}
+
+.closeBtn:hover {
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: rgb(88, 85, 85);
+    color: rgb(243, 0, 0) !important;
+    transition: all 300ms;
+}
+
+input[type="text"] {
+    width: 65px;
+    height: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #70707078;
+    color: white;
+}
+
+input[type="text"]:focus {
+    background-color: #ffffff83;
+    color: black;
+}
+
+input[type="button"] {
+    width: 25px;
+    height: 25px;
+    display: inline;
+    background-color: salmon;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: rgb(253, 88, 88);
+}
